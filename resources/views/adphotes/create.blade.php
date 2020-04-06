@@ -19,7 +19,6 @@
           @csrf
           <div class="form-group">
               <label for="belong">屬於:</label>
-              <!--<input type="text" class="form-control" name="class"/>-->
               <?php $advertisings = DB::table('advertisings')->get();?>
               <select class="form-control" name="belong" >
                   @foreach($advertisings as $advertising)

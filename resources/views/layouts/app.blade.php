@@ -12,8 +12,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>
     <script src="{{ asset('js/jquery.js') }}" type="text/javascript"></script>
-    <!--<script src="{{ asset('ckeditor_4.13.1_full/ckeditor/ckeditor.js') }}" ></script>
-    <script src="{{ asset('ckeditor_4.13.1_full/ckeditor/adapters/jquery.js') }}" ></script>-->
     <script src="//cdn.ckeditor.com/4.13.1/full/ckeditor.js"></script>
     <script src="//cdn.ckeditor.com/4.13.1/full/adapters/jquery.js"></script>
     <!-- Fonts -->
@@ -36,11 +34,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('登入') }}</a>
                             </li>
-                            <!--@if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新增成員') }}</a>
-                                </li>
-                            @endif-->
                             
                         @else
                             <a class="nav-link" href="{{ url('/home') }}" >{{ __('網站功能') }}</a>
@@ -133,61 +126,6 @@
                 </div>
             </div>
         </nav>
-        <!--<div style="float:left;">
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">廣告輪播</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/advertisings') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/advertisings/create') }}" >新增</a></li>
-                </ul>
-                </li>
-            </ul> 
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">公告</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/imformations') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/imformations/create') }}" >新增</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/imformation_classes') }}" >類別</a></li>
-                </ul>
-                </li>
-            </ul>    
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">檔案室</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/filerooms') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/filerooms/create') }}" >新增</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/fileroom_classes') }}" >類別</a></li>
-                </ul>
-                </li>
-            </ul> 
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">相簿</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/photealbums') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/photealbums/create') }}" >新增</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/photealbum_classes') }}" >類別</a></li>
-                </ul>
-                </li>
-            </ul> 
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">頁面</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/pages') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/pages/create') }}" >新增</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/page_classes') }}" >類別</a></li>
-                </ul>
-                </li>
-            </ul> 
-            <ul class="nav nav-tabs">
-                <li class="dropdown"><a class="btn btn-light"class="dropdown-toggle"  data-toggle="dropdown" href="#">相關連結</a>
-                <ul class="dropdown-menu">
-                    <li><a class="btn btn-light" href="{{ url('/networklinks') }}" >列表</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/networklinks/create') }}" >新增</a></li>
-                    <li><a class="btn btn-light" href="{{ url('/networklink_classes') }}" >類別</a></li>
-                </ul>
-                </li>
-            </ul>       
-        </div>-->
         <main class="py-4">
             @yield('content')
         </main>

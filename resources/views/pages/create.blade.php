@@ -19,7 +19,6 @@
           @csrf
           <div class="form-group">
               <label for="class">類別:</label>
-              <!--<input type="text" class="form-control" name="class"/>-->
               <?php $page_classes = DB::table('page_classes')->get();?>
               <select class="form-control" name="class" >
                   @foreach($page_classes as $page_class)

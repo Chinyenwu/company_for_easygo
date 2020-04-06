@@ -14,8 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//cdn.ckeditor.com/4.13.1/full/ckeditor.js"></script>
     <script src="//cdn.ckeditor.com/4.13.1/full/adapters/jquery.js"></script>
-    <!--<script src="{{ asset('ckeditor_4.13.1_full/ckeditor/ckeditor.js') }}" ></script>
-    <script src="{{ asset('ckeditor_4.13.1_full/ckeditor/adapters/jquery.js') }}" ></script>-->
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -39,11 +37,6 @@
                             <oi class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('登入') }}</a>
                             </oi>
-                            <!--@if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新增成員') }}</a>
-                                </li>
-                            @endif-->
                         @else
                             <oi class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -93,27 +86,7 @@
 
                 </div>
             </div>
-        </nav>
-         <!--<div style="float:left;">
-            <ul class="nav nav-tabs">
-                <li><a class="btn btn-light" href="{{ url('/setup') }}" >系統資訊</a></li>
-            </ul>   
-            <ul class="nav nav-tabs">   
-                <li><a class="btn btn-light" href="{{ url('/setup/tasks') }}" >網站架構</a></li>
-            </ul>
-            <ul class="nav nav-tabs">   
-                <li><a class="btn btn-light" href="{{ route('website_informations.create') }}" >網站資訊</a></li>
-            </ul> 
-            <ul class="nav nav-tabs">   
-                <li><a class="btn btn-light" href="{{ route('keywords.create')}}" >關鍵字設定</a></li>
-            </ul> 
-            <ul class="nav nav-tabs">   
-                <li><a class="btn btn-light" href="{{ url('/setup/prefers') }}" >系統偏好</a></li>
-            </ul> 
-            <ul class="nav nav-tabs">   
-                <li><a class="btn btn-light" href="{{ route('setupchanges.create') }}" >配置修改</a></li>
-            </ul>                          
-        </div>-->   
+        </nav>  
         <main class="py-4">
             @yield('content')
         </main>

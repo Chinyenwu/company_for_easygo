@@ -34,11 +34,6 @@
               <input type="text" class="form-control" name="title" value={{ $fileroom->title }} >
           </div>
 
-          <!--<div class="form-group">
-              <label for="filename">檔案名稱:</label>
-              <input type="text" class="form-control" name="filename" value={{ $fileroom->filename }}>
-          </div>-->
-
           <div class="form-group">
               <label for="file_path">檔案路徑:</label>
               <input type="file" class="form-control" name="file_path" value={{ $fileroom->file_path }}>

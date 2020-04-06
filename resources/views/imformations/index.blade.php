@@ -5,7 +5,6 @@
 <div class="col-sm-12">
   <h1 >公告</h1>    
 <!--<div class="col-sm-12">
-
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -21,7 +20,6 @@
     </div>
   </form><!--搜尋-->
   <div>
-    <!--<a style="margin: 19px;" href="{{ route('imformations.create')}}" class="btn btn-primary">新增公告</a>-->
   <table class="table table-striped">
     <thead>
         <tr>

@@ -19,7 +19,6 @@
           @csrf
           <div class="form-group">
               <label for="class">類別:</label>
-              <!--<input type="text" class="form-control" name="class"/>-->
               <?php $fileroom_classes = DB::table('fileroom_classes')->get();?>
               <select class="form-control" name="class" >
                   @foreach($fileroom_classes as $fileroom_class)
@@ -31,11 +30,6 @@
               <label for="title">標題:</label>
               <input type="text" class="form-control" name="title">
           </div>
-
-          <!--<div class="form-group">
-              <label for="filename">檔案名稱:</label>
-              <input type="text" class="form-control" name="filename">
-          </div>-->
 
           <div class="form-group">
               <label for="file_path">檔案路徑:</label>

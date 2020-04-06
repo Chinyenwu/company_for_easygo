@@ -39,7 +39,6 @@
                     </span>
                 </div>
                 </form> 
-                <!--<a href="{{ url('/auth/index/personlist')}}" class="btn btn-primary">教師外掛</a>-->
             </td>
             <td>
                 <form action="{{ route('users.destroy', $user->id)}}" method="post">

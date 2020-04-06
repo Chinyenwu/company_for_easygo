@@ -31,9 +31,9 @@ class CreateUsersTable extends Migration
           $table->datetime('birthday')->nullable();
           $table->string('contact_address')->nullable();
           $table->string('class');
-          $table->string('position');  
-            //$table->rememberToken();
-            //$table->timestamps();
+          $table->string('position');
+          $table->timestamps();  
+          //$table->rememberToken();  
         });
     }
 

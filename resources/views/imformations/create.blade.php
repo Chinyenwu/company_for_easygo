@@ -25,7 +25,6 @@
           <div id="information_basic">
           <div class="form-group">
               <label for="class">類別:</label>
-              <!--<input type="text" class="form-control" name="class"/>-->
               <?php $imformation_classes = DB::table('imformation_classes')->get();?>
               <select class="form-control" name="class">
                   @foreach($imformation_classes as $imformation_class)
