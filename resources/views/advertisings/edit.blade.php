@@ -15,6 +15,7 @@
         </div>
         <br /> 
         @endif
+        <!-- 編輯廣告輪播表格區 -->
         <form method="post" action="{{ route('advertisings.update', $advertising->id) }}">
             @method('PATCH') 
             @csrf

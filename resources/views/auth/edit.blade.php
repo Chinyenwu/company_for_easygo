@@ -15,6 +15,7 @@
         </div>
         <br /> 
         @endif
+        <!-- 編輯會員資料表格區 -->
         <form method="post" action="{{ route('auth.update', $user->id) }}">
             @method('PATCH') 
             @csrf

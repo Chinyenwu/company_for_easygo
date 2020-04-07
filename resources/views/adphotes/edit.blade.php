@@ -15,6 +15,7 @@
         </ul>
       </div><br />
     @endif
+    <!-- 編輯廣告輪播照片表格區 -->
       <form method="post" action="{{ route('adphotes.update',$advertising->id) }}" enctype="multipart/form-data">
           @method('PATCH') 
           @csrf

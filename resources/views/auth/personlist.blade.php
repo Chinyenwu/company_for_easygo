@@ -15,6 +15,7 @@
         </div>
         <br /> 
         @endif
+          <!-- 教師外掛功能區 -->
           <form action="/person_lists/activities" method="GET">
                 <div class="input-group">  
                     <input type="text" class="form-control" name="id" value={{ $user->id }}  style="display: none;"> 

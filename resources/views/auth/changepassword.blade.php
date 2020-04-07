@@ -15,6 +15,7 @@
         </div>
         <br /> 
         @endif
+        <!-- 修改密碼表格區 -->
         <form method="post" action="{{ route('auth.store') }}">
           @csrf
           <div class="form-group" style="display: none;">

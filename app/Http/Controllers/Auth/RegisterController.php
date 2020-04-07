@@ -86,6 +86,7 @@ class RegisterController extends Controller
             'imformation' => 'yes',
             'fileroom' => 'yes',
             'photealbum' => 'yes',
+            'networklink' => 'yes',
             'page' => 'yes',
             'auth' => 'yes',
             'register' => 'yes',
@@ -126,6 +127,7 @@ class RegisterController extends Controller
             'imformation' => 'no',
             'fileroom' => 'no',
             'photealbum' => 'no',
+            'networklink' => 'no',
             'page' => 'no',
             'auth' => 'no',
             'register' => 'no',
@@ -134,7 +136,8 @@ class RegisterController extends Controller
             'menus' => 'no',
             'website_information' => 'no',
             'keyword' => 'no',
-            'setupchange' => 'no'
+            'setupchange' => 'no',
+            'permission' => 'no'
         ]);
 
         $permission->save();

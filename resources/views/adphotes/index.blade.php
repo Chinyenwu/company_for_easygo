@@ -6,6 +6,7 @@
   <h1 >輪播</h1>    
   <a href="{{ route('adphotes.edit',$advertising->id)}}" class="btn btn-primary">新增</a>
   <div>
+  <!-- 廣告輪播照片列表區 -->
   <table class="table table-striped">
     <thead>
         <tr>

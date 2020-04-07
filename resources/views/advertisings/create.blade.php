@@ -15,6 +15,7 @@
         </ul>
       </div><br />
     @endif
+    <!-- 填廣告輪播表格區 -->
       <form method="post" action="{{ route('advertisings.store') }}">
           @csrf
           <div class="form-group">

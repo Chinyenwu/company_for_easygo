@@ -5,11 +5,11 @@
 <div class="col-sm-12">
   <h1 >廣告輪播</h1>    
   <div>
+  <!-- 廣告輪播列表顯示 -->
   <table class="table table-striped">
     <thead>
         <tr>
           <td>id</td>
-          <td>照片</td>
           <td>標題</td>
           <td>功能</td>
           <td></td>
@@ -19,7 +19,7 @@
     <tbody>
         @foreach($advertisings as $advertising)
         <tr>
-            <td>{{$advertising->id}}</td>
+            <td>{{$advertising->id}}</td>         
             <td>{{$advertising->title}}</td>
             <td>
                 <a href="{{ route('advertisings.edit',$advertising->id)}}" class="btn btn-primary">編輯</a>

@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('登入') }}</div>
 
                 <div class="card-body">
+                    <!-- 登入表格區 -->
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

@@ -15,6 +15,7 @@
         </ul>
       </div><br />
     @endif
+    <!-- 填廣告輪播照片表格區 -->
       <form method="post" action="{{ route('adphotes.store') }}" enctype="multipart/form-data">
           @csrf
           <div class="form-group">

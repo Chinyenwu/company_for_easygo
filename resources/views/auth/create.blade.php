@@ -15,7 +15,7 @@
         </div>
         <br /> 
         @endif
-
+        <!-- 編輯個人資料表格區 -->
         <form method="post" action="{{ route('auth.update', Auth::user() ) }}">
             @method('PATCH') 
             @csrf
@@ -37,11 +37,6 @@
           <div class="form-group">
               <label for="staff_number">員編標號:</label>
               <input type="text" class="form-control" name="staff_number" value={{ Auth::user()->staff_number }} >
-          </div>
-
-          <div class="form-group">
-              <label for="contact_phone">連絡電話:</label>
-              <input type="text" class="form-control" name="contact_phone" value={{ Auth::user()->contact_phone }} >
           </div>
 
           <div class="form-group">
@@ -73,6 +68,14 @@
               <label for="contact_address">住址:</label>
               <input type="text" class="form-control" name="contact_address" value={{ Auth::user()->contact_address }} >
           </div>
+
+          <div class="form-group">
+              <label for="permission">權限:</label>
+              <select class="form-control" name="permission" >
+              <option value="super_manager" <?php echo ( Auth::user()->permission == 'super_manager' ? 'selected="selected"': ''); ?>>管理者</option>
+              <option value="manager" <?php echo (Auth::user()->permission == 'manager' ? 'selected="selected"': ''); ?>>一般使用者</option>
+            </select>
+          </div>           
 
           <div class="form-group">
               <label for="class">職務類別:</label>
