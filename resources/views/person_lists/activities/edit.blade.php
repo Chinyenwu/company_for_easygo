@@ -18,10 +18,6 @@
         <form method="post" action="{{ route('activities.update', $activity->id) }}">
             @method('PATCH') 
             @csrf
-          <div class="form-group">
-              <label for="name">活動類別:</label>
-
-          </div>
           <div class="form-group">    
               <label for="name">活動名稱:</label>
               <input type="text" class="form-control" name="name" value={{ $activity->name }} >

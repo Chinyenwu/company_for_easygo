@@ -17,58 +17,71 @@
       <form method="post" action="{{ route('activities.store') }}">
           @csrf
           <div class="form-group">    
-              <label for="class">活動類別:</label>
-              <?php $activity_classes = DB::table('activity_classes')->get();?>
-              <select class="form-control" name="class" >
-                  @foreach($activity_classes as $activity_class)
-                  <option value="{{$activity_class->class}}">{{$activity_class->class}}</option>
-                  @endforeach
-              </select>
+              <label for="name">活動名稱:</label>
+              <input type="text" class="form-control" name="name"  >
+          </div>
+          <div class="form-group">    
+              <label for="title">標題:</label>
+              <input type="text" class="form-control" name="title" >
+          </div>
+          <div class="form-group">    
+              <label for="agency">機構:</label>
+              <input type="text" class="form-control" name="agency" >
+          </div>
+          <div class="form-group">    
+              <label for="job_title">工作名稱:</label>
+              <input type="text" class="form-control" name="job_title" >
           </div>          
           <div class="form-group">    
-              <label for="signup_start_date">報名起始日期:</label>
-              <input type="date" class="form-control" name="signup_start_date" value = "{{date('Y-m-d')}}">
+              <label for="publish_agency">公家機構:</label>
+              <input type="text" class="form-control" name="publish_agency" >
           </div>
           <div class="form-group">    
-              <label for="signup_end_date">報名結束日期:</label>
-              <input type="date" class="form-control" name="signup_end_date" value = "{{date('Y-m-d', strtotime('+1 year'))}}">
+              <label for="brief">簡介:</label>
+              <textarea class="form-control" name="brief" >{{ $activity->brief }}</textarea>
+          </div>   
+          <div class="form-group">    
+              <label for="year">年度:</label>
+              <input type="text" class="form-control" name="year" >
+          </div>
+          <div class="form-group">    
+              <label for="type">類別:</label>
+              <input  type="radio"  name="type"  value="{{ '展演' }}"  >展演
+              <input  type="radio"  name="type"  value="{{ '演講' }}"  >演講
+              <input  type="radio"  name="type"  value="{{ '研討會' }}"  >研討會
+          </div>
+            <div class="form-group">    
+              <label for="start_date">起始日期:</label>
+              <input type="date" class="form-control" name="start_date" >
+          </div>
+          <div class="form-group">    
+              <label for="end_date">結束日期:</label>
+              <input type="date" class="form-control" name="end_date" >
           </div>  
           <div class="form-group">    
-              <label for="start_date">活動起始日期:</label>
-              <input type="date" class="form-control" name="start_date" value = "{{date('Y-m-d')}}">
-          </div>
-          <div class="form-group">    
-              <label for="end_date">活動結束日期:</label>
-              <input type="date" class="form-control" name="end_date" value = "{{date('Y-m-d', strtotime('+1 year'))}}">
-          </div> 
-          <div class="form-group">    
-              <label for="name">活動名稱:</label>
-              <input type="text" class="form-control" name="name">
-          </div>
-          <div class="form-group">    
-              <label for="position">地點:</label>
-              <input type="text" class="form-control" name="position">
-          </div>
-          <div class="form-group">    
-              <label for="remark">備註:</label>
-              <textarea class="form-control" name="remark"></textarea>
-          </div>
-          <div class="form-group">    
-              <label for="website">網站:</label>
-              <input type="text" class="form-control" name="website">
-          </div> 
-          <div class="form-group">    
               <label for="file">檔案名稱:</label>
-              <input type="text" class="form-control" name="file">
+              <input type="text" class="form-control" name="file" >
           </div>
           <div class="form-group">    
               <label for="file_path">檔案路徑:</label>
-              <input type="text" class="form-control" name="file_path">
+              <input type="text" class="form-control" name="file_path" >
           </div>
+          <div class="form-group">    
+              <label for="website">網站:</label>
+              <input type="text" class="form-control" name="website" >
+          </div>
+            <div class="form-group">    
+              <label for="position">地點:</label>
+              <input type="text" class="form-control" name="position" >
+          </div> 
+          <div class="form-group">    
+              <label for="remark">備註:</label>
+              <textarea class="form-control" name="remark" ></textarea>
+          </div>   
           <div class="form-group" style="display: none;">    
               <label for="person">持有人:</label>
               <input type="text" class="form-control" name="person" value={{$user->name}}>
-          </div>   
+          </div>
 
           <button type="submit" class="btn btn-primary">新增</button>
       </form>

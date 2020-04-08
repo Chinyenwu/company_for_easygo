@@ -15,19 +15,21 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('class');
-            $table->string('signup_start_date');
-            $table->string('signup_end_date');
-            $table->string('start_date');
-            $table->string('end_date');
             $table->string('name');
-            $table->string('context')->nullable();
-            $table->string('position')->nullable();
-            $table->string('remark')->nullable();
-            $table->string('website')->nullable();
+            $table->string('title')->nullable();
+            $table->string('agency')->nullable();
+            $table->string('publish_agency')->nullable();
+            $table->string('brief')->nullable();
+            $table->string('year')->nullable();
+            $table->string('type')->nullable();
+            $table->string('start_date')->nullable();
+            $table->string('end_date')->nullable();
             $table->string('file')->nullable();
             $table->string('file_path')->nullable();
-            $table->string('person');
+            $table->string('website')->nullable();
+            $table->string('position')->nullable();
+            $table->string('remark')->nullable();
+            $table->string('person')->nullable();
             $table->timestamps();
         });
     }
